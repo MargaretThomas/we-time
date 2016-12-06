@@ -29,6 +29,7 @@ a img{
 	border-radius:15px 50px;
 }
 
+/* Speech bubble */
 #speech
 {
 	position: relative;
@@ -42,14 +43,11 @@ a img{
 	border-style:dotted;
 }
 
-
-
 div.img {
     border: 2px solid #ccc;
 	border-radius: 30px;
 	padding: 10px;
 }
-
 
 div.img img {
     width: 100%;
