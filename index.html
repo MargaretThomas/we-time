@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
+<!-- Including the script file that calls the Instagram API -->
+<script src="appController.js"></script>
+<!-- Including the css file -->
+<link rel="stylesheet" type="text/css" href="styles.css" /> 
+</head>
+<body  ng-app="myApp">
+<div ng-controller="myCtrl">
+	<h1>Margaret's Media</h1>
+	
+	<!-- Display the images -->
+	<div ng-model="data">
+		<div ng-repeat="obj in data">
+			<div class="responsive">
+				<div class="img">
+					<a id="img-container" target="_blank" href="{{obj.images.low_resolution.url}}">
+					<img ng-src="{{obj.images.low_resolution.url}}" width="100" height="100"/>
+					</a>
+					<p id="speech">
+						<!-- Pull the caption-->
+						{{obj.caption.text}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+ </body>
+ </html>
