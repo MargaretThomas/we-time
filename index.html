@@ -12,6 +12,7 @@
 </head>
 <body ng-app="myApp">
 <div ng-controller="myCtrl">
+<div ng-init="initialisePage()">
 	<h1>Margaret's Media</h1>
 	<!-- Display the images -->
 	<div ng-model="data">
@@ -29,5 +30,16 @@
 			</div>
 		</div>
 	</div>
+	<!--
+	<button ng-click="getComments()">what's up</button>
+	<div ng-repeat="ids in mediaIDs">
+		<p>{{ids}}</p>
+	</div>
+	<p>{{comments.length}}</p>
+	<div ng-repeat="comm in comments">
+		<p>{{comm}}</p>
+	</div>
+	-->
+</div>
  </body>
  </html>
