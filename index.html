@@ -12,7 +12,7 @@
 </head>
 <body ng-app="myApp">
 <div ng-controller="myCtrl">
-<div ng-init="initialisePage()">
+<div ng-init="getDataForImmedia()" id="">
 	<h1>Margaret's Media</h1>
 	<!-- Display the images -->
 	<div ng-model="data">
@@ -20,26 +20,24 @@
 			<div class="responsive">
 				<div class="img">
 					<a id="img-container" target="_blank" href="{{obj.images.low_resolution.url}}">
-					<img ng-src="{{obj.images.low_resolution.url}}" width="100" height="100"/>
+					<img id="singleImage" ng-src="{{obj.images.low_resolution.url}}"/>
 					</a>
-					<p id="speech">
-						<!-- Pull the caption-->
-						{{obj.caption.text}}
+					<br>
+					
+					<p id="likes">
+						<!-- Pull the likes-->
+						Likes: {{obj.likes.count}}
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!--
-	<button ng-click="getComments()">what's up</button>
-	<div ng-repeat="ids in mediaIDs">
-		<p>{{ids}}</p>
-	</div>
-	<p>{{comments.length}}</p>
+	<br>
+	<button id="btnComments" ng-click="getComments()"> View Comments </button>
 	<div ng-repeat="comm in comments">
-		<p>{{comm}}</p>
+		<p class="triangle-border">{{comm}}</p>
 	</div>
-	-->
+</div>
 </div>
  </body>
  </html>
